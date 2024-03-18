@@ -70,6 +70,8 @@ export async function requestOpenai(req: NextRequest) {
     headers: {
       "Content-Type": "application/json",
       "Cache-Control": "no-store",
+      //LLM REPORT
+      "X-Api-Key": "Bearer a98f4a6dae2b6bcab962724096cf7cb2bf0cd017789a950e42aeb2a649eb7ec9" , 
       [authHeaderName]: authValue,
       ...(serverConfig.openaiOrgId && {
         "OpenAI-Organization": serverConfig.openaiOrgId,
